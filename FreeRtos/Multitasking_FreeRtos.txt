@@ -1,6 +1,11 @@
 //create a freertos task to perform multi-tasking
 //Assume that we got 2 different counters. we want to increment them in 2 different tasks. How will you achieve this
 
+//Here we focus on following aspects of FreeRTOS
+1. How to create a task
+2. How to achieve multi-tasking on single core using scheduler
+3. Use of vTaskDelay function to achieve multitasking
+
 int count1 = 0;
 int count2 = 0;
 

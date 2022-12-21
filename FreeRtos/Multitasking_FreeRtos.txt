@@ -1,0 +1,56 @@
+//create a freertos task to perform multi-tasking
+//Assume that we got 2 different counters. we want to increment them in 2 different tasks. How will you achieve this
+
+int count1 = 0;
+int count2 = 0;
+
+void task1(void * parameters)
+{
+
+	while(1)
+	{
+		printf("task1 counter");
+		printf("%d",count1++)
+		vTaskDelay(1000 / portTICK_PERIOD_MS);
+	
+	}
+
+}
+
+
+
+void task2(void *parameters)
+{
+	while(1)
+	{
+		printf("task2 counter");
+		printf("%d",count2++)
+		vTaskDelay(1000 / portTICK_PERIOD_MS);
+	
+	}
+
+}
+
+
+int main(void)
+{
+
+	xTaskCreate(
+	task1,//dunction name
+	"Task1",
+	1000, //1000 bytes stack
+	NULL, //parameters task receives
+	1,//priority of task. Lower the number higher the priority
+	NULL//Task handler);
+	
+	
+	xTaskCreate(
+	task2,//dunction name
+	"Task1",
+	1000, //1000 bytes stack
+	NULL, //parameters task receives
+	1,//priority of task. Lower the number higher the priority
+	NULL//Task handler);
+
+
+}

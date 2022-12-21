@@ -1,2 +1,3 @@
 Which factors determine the MAX number of tasks which can be cretaed with FreeRTOS: Stack Size alloted for each task & RAM size
 What's the difference between normal delay() function and vTaskDelay(): vTaskDelay() tells schedular to pick up another task to running state till the time we are delaying the existing task
+What's the criteria for selection of HEAP implementation strategy

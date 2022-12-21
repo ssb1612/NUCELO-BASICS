@@ -1,0 +1,1 @@
+Which factors determine the MAX number of tasks which can be cretaed with FreeRTOS: Stack Size alloted for each task & RAM size
